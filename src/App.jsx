@@ -10,7 +10,7 @@ const MODULOS = [
     descripcion: "Control de stock de materiales, equipos y consumibles. Movimientos, alertas de mínimos y trazabilidad por ítem.",
     icono: "📦",
     status: "activo",
-    url: "https://inventario-cleansea.vercel.app",
+    url: "https://integra.inventario.cleansea.com.ar",
     color: "#1A7A6E",
     tags: ["Stock", "Materiales", "Movimientos"],
   },
