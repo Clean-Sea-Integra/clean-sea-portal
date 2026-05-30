@@ -89,8 +89,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 .login-bg-lines {
   position: absolute; inset: 0; z-index: 0;
   background-image:
-    linear-gradient(rgba(26,122,110,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26,122,110,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(26,122,110,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,122,110,0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .login-split { position: relative; z-index: 2; display: flex; width: 100%; }
@@ -176,7 +176,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 .login-left-integra-img  { height: 340px; width: auto; object-fit: contain; opacity: 0.95; }
 .login-left-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin: 8px 0 20px; }
 .login-left-company { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
-.login-left-company-logo { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; border: 1.5px solid rgba(255,255,255,0.2); }
+.login-left-company-logo { width: 48px; height: 48px; border-radius: 50%; object-fit: contain; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); }
 .login-left-company-name { font-size: 20px; font-weight: 800; color: #fff; letter-spacing: 0.5px; }
 .header-brand { display: flex; align-items: center; gap: 14px; }
 .header-logo-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(255,255,255,0.2); }
@@ -202,8 +202,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 
 /* ── HERO ── */
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy2) 60%, var(--navy3) 100%);
-  padding: 56px 40px 52px; position: relative; overflow: hidden;
+  background: linear-gradient(160deg, #0D1B2E 0%, #132040 60%, #213363 100%);
+  padding: 28px 40px 24px; position: relative; overflow: hidden;
+  height: 370px; display: flex; align-items: center;
 }
 .hero::before {
   content: ''; position: absolute; bottom: -80px; right: -80px;
@@ -215,6 +216,8 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, transparent, var(--teal), transparent);
 }
+.hero-logo-wrap { margin: 0; }
+.hero-logo-img  { height: 340px; width: auto; object-fit: contain; }
 .hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
 .hero-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: 3px; color: var(--teal2); text-transform: uppercase; margin-bottom: 14px; }
 .hero-title { font-size: 42px; font-weight: 900; color: #fff; line-height: 1.0; margin-bottom: 6px; letter-spacing: -1.5px; }
@@ -269,6 +272,24 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 
 /* ── FOOTER ── */
 .portal-footer { border-top: 1px solid rgba(26,122,110,0.2); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; background: var(--navy); }
+
+@media (max-width: 768px) {
+  .login-split { flex-direction: column; }
+  .login-left { padding: 48px 32px 32px; border-right: none; border-bottom: 1px solid rgba(26,122,110,0.2); align-items: center; text-align: center; }
+  .login-left-integra-img { height: 200px; max-width: 90vw; }
+  .login-left-line { margin: 16px auto; }
+  .login-left-sub { max-width: 100%; }
+  .login-right { width: 100%; padding: 32px 24px 48px; }
+  .login-card { padding: 28px 24px; }
+  .hero { height: auto !important; padding: 24px 20px; }
+  .hero-logo-img { height: 160px; max-width: 90vw; }
+  .hero-content { text-align: center; }
+  .header { padding: 0 16px; height: 52px; }
+  .header-integra-img { height: 32px; }
+  .content { padding: 24px 16px 48px; }
+  .modulos-grid { grid-template-columns: 1fr; }
+  .portal-footer { padding: 16px 20px; flex-direction: column; gap: 6px; text-align: center; }
+}
 .footer-left  { font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.25); }
 .footer-right { font-family: var(--mono); font-size: 10px; color: var(--teal2); opacity: 0.5; }
 
@@ -484,19 +505,8 @@ export default function App() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">Portal de gestión · Clean Sea</div>
-          <h1 className="hero-title"><span>Clean</span> Sea</h1>
-          <div className="hero-line" />
-          <div className="hero-tagline">Respuesta ambiental · Salvamento marítimo · Cargas líquidas.</div>
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <div className="hero-stat-n">{MODULOS.length}</div>
-              <div className="hero-stat-l">Módulos</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-n">{activos.length}</div>
-              <div className="hero-stat-l">Activos</div>
-            </div>
+          <div className="hero-logo-wrap">
+            <img src="/integralogo.png" alt="INTEGRA" className="hero-logo-img" />
           </div>
         </div>
       </div>
