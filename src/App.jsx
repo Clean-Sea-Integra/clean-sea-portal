@@ -30,7 +30,7 @@ const MODULOS = [
     descripcion: "Control de certificaciones, vencimientos, inspecciones, incidentes y cumplimiento normativo.",
     icono: "🛡️",
     status: "activo",
-    url: "#", // TODO: reemplazar por el link real de HSQE Clean Sea cuando esté disponible
+    url: "https://hsqe-pl-clean-sea.vercel.app/", // TODO: reemplazar por el link real de HSQE Clean Sea cuando esté disponible
     color: "#C0392B",
     tags: ["Seguridad", "ISO", "Certificaciones"],
   },
