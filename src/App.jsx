@@ -29,8 +29,8 @@ const MODULOS = [
     nombre: "HSQE",
     descripcion: "Control de certificaciones, vencimientos, inspecciones, incidentes y cumplimiento normativo.",
     icono: "🛡️",
-    status: "proximamente",
-    url: null,
+    status: "activo",
+    url: "#", // TODO: reemplazar por el link real de HSQE Clean Sea cuando esté disponible
     color: "#C0392B",
     tags: ["Seguridad", "ISO", "Certificaciones"],
   },
