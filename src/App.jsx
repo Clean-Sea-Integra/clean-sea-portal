@@ -42,7 +42,6 @@ const Ico = ({ d, size = 18 }) => (
 const IcoSearch  = () => <Ico size={16} d={<><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></>} />;
 const IcoBell    = () => <Ico d={<><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8" /><path d="M13.7 21a2 2 0 0 1-3.4 0" /></>} />;
 const IcoHelp    = () => <Ico d={<><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.3c-.7.4-1.1 1-1.1 1.7v.3" /><path d="M12 17.5h.01" /></>} />;
-const IcoCaret   = () => <Ico size={14} d={<path d="M6 9l6 6 6-6" />} />;
 
 /* ─── FORMATOS ──────────────────────────────────────────────────────────────
    Fecha 12.03.2026 · fecha y hora 12.03.2026 · 14:30. Dato ausente: — */
@@ -305,10 +304,7 @@ function Portal({ user, permisos, onLogout }) {
       <header className="topbar">
         <img src="/integra-isotipo-white.svg" alt="INTEGRA" className="topbar-iso" />
         <span className="topbar-div" />
-        <span className="topbar-company">
-          {EMPRESA_NOMBRE}
-          <IcoCaret />
-        </span>
+        <span className="topbar-company">{EMPRESA_NOMBRE}</span>
         <input
           className="topbar-search" type="search" disabled
           placeholder="Buscar requisición, proyecto, buque o documento"
