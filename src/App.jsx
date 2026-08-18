@@ -10,7 +10,7 @@ const EMPRESA_NOMBRE = "Clean Sea S.A.";
 const MODULOS = [
   { id:"inventario", codigo:"INV", nombre:"Inventario",
     descripcion:"Stock de materiales, equipos y consumibles. Movimientos, aviso de mínimos y trazabilidad por ítem.",
-    estado:"activo", url:"http://integra.hsqe.cleansea.com.ar/" },
+    estado:"activo", url:"http://integra.Inventario.cleansea.com.ar/" },
   { id:"hsqe", codigo:"HSQE", nombre:"HSQE",
     descripcion:"Certificaciones, inspecciones, incidentes y no conformidades.",
     estado:"activo", url:"https://integra.hsqe.cleansea.com.ar" },
