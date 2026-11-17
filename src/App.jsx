@@ -16,7 +16,8 @@ const MODULOS = [
     estado:"activo", url:"https://integra.hsqe.cleansea.com.ar" },
   { id:"dock-manager", codigo:"DOCK", nombre:"Dock Manager",
     descripcion:"Servicios de barreras en puerto: órdenes, cuadrillas, horas y firma del cliente por buque.",
-    estado:"activo", url:"https://integra.dockmanager.cleansea.com.ar" },
+    /* Link directo: Dock Manager tiene su propio control de usuarios. */
+    estado:"activo", url:"https://integra.dockmanager.cleansea.com.ar", libre:true },
   { id:"compras", codigo:"COMP", nombre:"Compras",
     descripcion:"Requisiciones, cotizaciones, órdenes de compra y proveedores.",
     estado:"proximo", url:null },
@@ -295,7 +296,8 @@ function Portal({ user, permisos, onLogout }) {
     return () => { vivo = false; };
   }, [user.id]);
 
-  const tieneAcceso = (id) => !permisos || permisos.includes(id);
+  const tieneAcceso = (id) =>
+    !permisos || permisos.includes(id) || !!MODULOS.find(m => m.id === id)?.libre;
   const nombre      = perfil?.nombre || user.email;
   const primerNombre = (perfil?.nombre || "").split(" ")[0];
 
