@@ -20,7 +20,8 @@ const MODULOS = [
     estado:"activo", url:"https://integra.dockmanager.cleansea.com.ar", libre:true },
   { id:"academy", codigo:"ACAD", nombre:"Clean Sea Academy",
     descripcion:"Cursos con inscripción por QR, certificados de asistencia y envío por mail.",
-    estado:"activo", url:"https://integra.cleanseaacademy.cleansea.com.ar" },
+    /* Provisorio hasta que esté el CNAME de integra.cleanseaacademy.cleansea.com.ar en Hostmar. */
+    estado:"activo", url:"https://clean-sea-academy.vercel.app" },
   { id:"compras", codigo:"COMP", nombre:"Compras",
     descripcion:"Requisiciones, cotizaciones, órdenes de compra y proveedores.",
     estado:"proximo", url:null },
