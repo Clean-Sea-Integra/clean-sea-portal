@@ -18,6 +18,9 @@ const MODULOS = [
     descripcion:"Servicios de barreras en puerto: órdenes, cuadrillas, horas y firma del cliente por buque.",
     /* Link directo: Dock Manager tiene su propio control de usuarios. */
     estado:"activo", url:"https://integra.dockmanager.cleansea.com.ar", libre:true },
+  { id:"academy", codigo:"ACAD", nombre:"Clean Sea Academy",
+    descripcion:"Cursos con inscripción por QR, certificados de asistencia y envío por mail.",
+    estado:"activo", url:"https://integra.cleanseaacademy.cleansea.com.ar" },
   { id:"compras", codigo:"COMP", nombre:"Compras",
     descripcion:"Requisiciones, cotizaciones, órdenes de compra y proveedores.",
     estado:"proximo", url:null },
